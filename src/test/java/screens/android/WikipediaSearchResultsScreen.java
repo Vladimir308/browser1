@@ -12,23 +12,23 @@ import static io.appium.java_client.AppiumBy.id;
 
 public class WikipediaSearchResultsScreen {
 
-    private final ElementsCollection foundItems = $$(id("org.wikipedia.alpha:id/page_list_item_title"));
-    private final SelenideElement errorText = $(id("org.wikipedia.alpha:id/view_wiki_error_text"));
-    private final SelenideElement loginText = $(id("org.wikipedia.alpha:id/login_button"));
+    private static final ElementsCollection foundItems = $$(id("org.wikipedia.alpha:id/page_list_item_title"));
+    private static final SelenideElement errorText = $(id("org.wikipedia.alpha:id/view_wiki_error_text"));
+    private static final SelenideElement loginText = $(id("org.wikipedia.alpha:id/login_button"));
 
     @Step("Verify result")
-    public int getResultsCount() {
+    public static int getResultsCount() {
 
         return foundItems.size();
     }
 
     @Step("Verify result")
-    public void ResultError() {
+    public static void ResultError() {
         errorText.shouldBe(visible);
     }
 
     @Step("Verify result")
-    public void ResultLogin() {
+    public static void ResultLogin() {
         loginText.shouldHave(text("Log in"));
     }
 }

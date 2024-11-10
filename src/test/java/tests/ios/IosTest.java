@@ -7,7 +7,7 @@ import tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
-import static screens.SampleApp.querySearch;
+import static screens.ios.SampleApp.querySearch;
 
 public class IosTest extends TestBase {
     String result;

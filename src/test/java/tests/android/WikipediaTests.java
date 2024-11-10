@@ -1,21 +1,18 @@
-package tests;
+package tests.android;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import screens.android.WikipediaSearchResultsScreen;
-import screens.android.WikipediaSearchScreen;
+import tests.TestBase;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Tag("android")
 public class WikipediaTests extends TestBase {
-    WikipediaSearchScreen searchScreen = new WikipediaSearchScreen();
-    WikipediaSearchResultsScreen searchResultsScreen = new WikipediaSearchResultsScreen();
 
     @Test
     @DisplayName("Verify Successful Search Results in Wikipedia App")
-    public void successfulSearchTest() {
+    public void  successfulSearchTest() {
         String query = "Appium";
         searchScreen.searchFor(query);
         assertThat(searchResultsScreen.getResultsCount()).isGreaterThan(0);
