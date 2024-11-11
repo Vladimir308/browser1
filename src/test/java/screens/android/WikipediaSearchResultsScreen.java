@@ -16,18 +16,18 @@ public class WikipediaSearchResultsScreen {
     private static final SelenideElement errorText = $(id("org.wikipedia.alpha:id/view_wiki_error_text"));
     private static final SelenideElement loginText = $(id("org.wikipedia.alpha:id/login_button"));
 
-    @Step("Verify result")
+    @Step("Успешный результат")
     public static int getResultsCount() {
 
         return foundItems.size();
     }
 
-    @Step("Verify result")
+    @Step("Успешный результат")
     public static void ResultError() {
         errorText.shouldBe(visible);
     }
 
-    @Step("Verify result")
+    @Step("Успешный результат")
     public static void ResultLogin() {
         loginText.shouldHave(text("Log in"));
     }

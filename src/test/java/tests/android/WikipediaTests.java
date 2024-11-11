@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class WikipediaTests extends TestBase {
 
     @Test
-    @DisplayName("Verify Successful Search Results in Wikipedia App")
+    @DisplayName("Проверить успешные результаты поиска в приложении Wikipedia")
     public void successfulSearchTest() {
         String query = "Appium";
         WikipediaSearchScreen.searchFor(query);
@@ -21,7 +21,7 @@ public class WikipediaTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Verify Error Message for Unsuccessful Search in Wikipedia App")
+    @DisplayName("Проверить сообщение об ошибке при неудачном поиске в приложении Wikipedia")
     public void unsuccessfulSearchTest() {
         String query = "Java";
         WikipediaSearchScreen.searchForUnsuccessful(query);
@@ -29,7 +29,7 @@ public class WikipediaTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Checking the presence of the Log in button")
+    @DisplayName("Проверка наличия регистрации в приложении Wikipedia")
     public void checkLogInButtonTest() {
         WikipediaSearchScreen.loginButton();
         WikipediaSearchResultsScreen.ResultLogin();
